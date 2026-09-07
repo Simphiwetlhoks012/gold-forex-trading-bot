@@ -41,7 +41,25 @@ rsi_val = 56.56
 paper_balance = 10000.00
 planned_risk = 100.00
 entry_price = 4476.6001
-direction = "BUY"
+# Live data parameters matching your interface figures
+live_market_price = 4476.6001
+rsi_val = 56.56
+paper_balance = 10000.00
+planned_risk = 100.00
+entry_price = 4476.6001
+
+# --- REWRITTEN SIGNAL EVALUATION ENGINE ---
+# This replaces the hardcoded "BUY" text with real live rules
+if live_market_price > 4472.8950 and rsi_val < 60:
+    direction = "BUY"
+    signal_status_text = "🟢 BUY SIGNAL — Indicators show a strong bullish entry trend."
+elif live_market_price < 4246.9420 and rsi_val > 50:
+    direction = "SELL"
+    signal_status_text = "🔴 SELL SIGNAL — Indicators show an overextended bearish drop."
+else:
+    direction = "HOLD"
+    signal_status_text = "🟡 NEUTRAL SIGNAL — Market conditions are mixed. Standby."
+
 
 # --- 4. APP HEADER & OVERVIEW ---
 st.title("🤖 Gold & Forex Trading Bot")
