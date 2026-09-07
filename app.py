@@ -57,6 +57,7 @@ else:
 # --- 4. APP HEADER & OVERVIEW ---
 st.title("🤖 Gold & Forex Trading Bot")
 st.caption(f"🥇 Gold (XAUUSD) • PAPER TRADING • Updated {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+st.info(signal_status_text)
 
 # Top Metrics Layout
 col1, col2, col3 = st.columns(3)
