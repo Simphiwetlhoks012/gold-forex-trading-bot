@@ -41,13 +41,6 @@ rsi_val = 56.56
 paper_balance = 10000.00
 planned_risk = 100.00
 entry_price = 4476.6001
-# Live data parameters matching your interface figures
-live_market_price = 4476.6001
-rsi_val = 56.56
-paper_balance = 10000.00
-planned_risk = 100.00
-entry_price = 4476.6001
-
 # --- REWRITTEN SIGNAL EVALUATION ENGINE ---
 # This replaces the hardcoded "BUY" text with real live rules
 if live_market_price > 4472.8950 and rsi_val < 60:
