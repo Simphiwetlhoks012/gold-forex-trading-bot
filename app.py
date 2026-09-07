@@ -64,11 +64,8 @@ with col1:
     st.metric("Market Price", f"{live_market_price:,.4f}", "+1.06%")
 with col2:
     st.metric("Bot Signal", direction)
-st.info(signal_status_text)
+st.inst.info(signal_status_text)
 
-    st.metric("RSI", f"{rsi_val:.2f}")
-
-st.metric("Paper Balance", f"R{paper_balance:,.2f}")
 
 # --- 5. FIXED LIVE PRICE CHART ---
 st.subheader("📈 Price Chart")
